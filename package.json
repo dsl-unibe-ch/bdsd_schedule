@@ -1,0 +1,18 @@
+{
+  "name": "bdsd_schedule",
+  "version": "1.0.0",
+  "description": "Schedule website for Bern Data Science Day",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Kashev <alexander.kashev@unibe.ch>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "csv-parse": "^5.3.8",
+    "luxon": "^3.3.0"
+  }
+}

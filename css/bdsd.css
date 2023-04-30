@@ -1,0 +1,27 @@
+table.schedule {
+  border-collapse: collapse;
+}
+
+table.schedule td {
+  padding: 0.3em;
+}
+
+table.schedule tbody tr:nth-child(2n+1) {
+  background-color: lightgray;
+}
+
+table.schedule td.time {
+  text-align: center
+}
+
+table.schedule tr[data-belongs-to="main"] span.title {
+  font-weight: bold;
+}
+
+table.schedule tr[data-belongs-to="fluff"] td.title {
+  font-style: italic;
+}
+
+table.schedule td.room {
+  text-align: center
+}

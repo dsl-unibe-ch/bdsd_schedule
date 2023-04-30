@@ -1,0 +1,36 @@
+---
+title: BDSD 2023
+layout: layouts/base
+description: Bern Data Science Day 2023
+date: Last Modified
+---
+<h1>Bern Data Science Day 2023</h1>
+  
+<p>
+  Website under construction!
+  See current event information at the <a href="https://www.dsl.unibe.ch/lab/bdsd/">DSL event page</a>
+</p>
+
+<h2>Main schedule</h2>
+
+<table class="schedule">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Event</th>
+      <th>Room</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in schedule_array -%}{% if (item.belongs_to == "main") or (item.belongs_to == "fluff") -%}
+    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}">
+      <td class="time">{{ item.time_start }}&ndash;{{ item.time_end }}</td>
+      <td class="title">
+        <span class="title">{{ item.title }}</span>
+        {%- if item.presented_by %}<br><span class="presented_by">{{ item.presented_by }}</span>{% endif %}
+      </td>
+      <td class="room">{{ item.room }}</td>
+    </tr>
+    {%- endif %}{%- endfor %}
+  </tbody>
+</table>
