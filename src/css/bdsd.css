@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 table.schedule {
   border-collapse: collapse;
 }
@@ -24,4 +28,8 @@ table.schedule tr[data-belongs-to="fluff"] td.title {
 
 table.schedule td.room {
   text-align: center
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans;
 }

@@ -1,8 +1,9 @@
 const { parse } = require('csv-parse/sync');
+const PostCSSPlugin = require("eleventy-plugin-postcss");
 
 module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('css');
+  //eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('js');
   
@@ -16,6 +17,8 @@ module.exports = eleventyConfig => {
       skip_empty_lines: true
     });
   });
+
+  eleventyConfig.addPlugin(PostCSSPlugin);
 
   return {
     dir: {
