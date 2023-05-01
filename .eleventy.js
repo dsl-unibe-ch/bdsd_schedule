@@ -18,6 +18,10 @@ module.exports = eleventyConfig => {
     });
   });
 
+  eleventyConfig.setServerOptions({
+    showAllHosts: true
+  })
+
   eleventyConfig.addPlugin(PostCSSPlugin);
 
   return {

@@ -2,8 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{njk,js}"],
   theme: {
+    fontFamily: {
+      sans: ['Montserrat', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

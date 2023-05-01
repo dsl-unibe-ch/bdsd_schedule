@@ -1,25 +1,25 @@
 ---
-title: BDSD 2023
+title: Morning Poster Session
 layout: layouts/bdsd
-description: Bern Data Science Day 2023
 date: Last Modified
 ---
-<h2 class="my-4 font-semibold">Main schedule</h2>
+<a class="my-4 font-semibold" href="/">&lt; Back to Main Schedule</a>
+
+<h2 class="my-4 font-semibold">Afternoon Poster Session</h2>
 
 <table class="mx-auto min-w-[80%]">
   <thead>
     <tr class="bg-purple-300 text-lg">
       <th>Time</th>
-      <th>Event</th>
+      <th>Presentation</th>
       <th>Room</th>
     </tr>
   </thead>
   <tbody>
-    {% for item in schedule_array -%}{% if (item.belongs_to == "main") or (item.belongs_to == "fluff") -%}
+    {% for item in schedule_array -%}{% if item.belongs_to == "poster_session_b" -%}
     <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white odd:print:bg-slate-100">
       <td class="px-2 py-1.5">{{ item.time_start }}&ndash;{{ item.time_end }}</td>
       <td class="px-2 py-1.5">
-        {% if item.belongs_to == "main" %}
         <div class="flex flex-col">
           <div class="font-semibold">
             {% if item.children | length %}
@@ -30,9 +30,6 @@ date: Last Modified
           </div>
           {%- if item.presented_by %}<div class="text-slate-900 text-sm">{{ item.presented_by }}</div>{% endif %}
         </div>
-        {% elif item.belongs_to == "fluff" %}
-          <span class="italic">{{ item.title }}</div>
-        {% endif %}
       </td>
       <td class="px-2 py-1.5">{{ item.room }}</td>
     </tr>

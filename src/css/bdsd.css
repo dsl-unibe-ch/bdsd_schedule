@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-4xl;
+    @apply font-sans;
+  }
+  h2 {
+    @apply text-3xl;
+    @apply font-sans;
+  }
+  h3 {
+    @apply text-2xl;
+    @apply font-sans;
+  }
+
+  a {
+    @apply hover:underline;
+    @apply text-blue-700;
+  }
+
+  body {
+    print-color-adjust: exact !important;
+  }
+}
+/* 
+h1 {
+  font-weight: 900;
+}
+
 table.schedule {
   border-collapse: collapse;
 }
@@ -28,8 +56,4 @@ table.schedule tr[data-belongs-to="fluff"] td.title {
 
 table.schedule td.room {
   text-align: center
-}
-
-h1, h2, h3 {
-  font-family: 'Montserrat', sans;
-}
+} */
