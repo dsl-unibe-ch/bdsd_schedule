@@ -1,18 +1,6 @@
 [
-  {
-    "id": "poster_session_a",
-    "title": "Morning Poster Session"
-  },
-  {
-    "id": "poster_session_b",
-    "title": "Afternoon Poster Session"
-  },
-  {
-    "id": "presentation_session_a",
-    "title": "Morning Poster Session"
-  },
-  {
-    "id": "presentation_session_b",
-    "title": "Afternoon Presentation Session"
-  }
+  "poster_session_a",
+  "poster_session_b",
+  "presentation_session_a",
+  "presentation_session_b"
 ]

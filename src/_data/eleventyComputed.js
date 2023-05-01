@@ -79,6 +79,7 @@ module.exports = {
           const unique_times = [...new Set(room_track.children.map(child => child.time_string))];
           room_track.times = unique_times.map(time => ({time, subschedule: room_track.children.filter(child => child.time_string == time)}))
         });
+        item.session_type = item.children[0].type;
       }
     );
 
