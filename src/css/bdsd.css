@@ -19,10 +19,12 @@
   a {
     @apply hover:underline;
     @apply text-blue-700;
+    @apply dark:text-blue-300;
   }
 
   body {
     print-color-adjust: exact !important;
+    @apply dark:text-white;
   }
 }
 /* 

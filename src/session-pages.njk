@@ -15,13 +15,13 @@ date: Last Modified
 
 {% set session = sessions[session_name.id] %}
 {% for room_track in session.room_tracks %}
-
-<h3 class="my-4 font-semibold">Room {{ room_track.room }}</h3>
-<table class="mx-auto min-w-[80%]">
+<div>
+<h3 class="my-4 font-semibold sticky top-0 bg-gradient-to-b from-orange-200 to-white dark:from-purple-950 dark:to-black bg-fixed print:bg-white">Room {{ room_track.room }}</h3>
+<table class="mx-auto w-full">
   <thead>
     <tr class="text-lg">
-      <th class="bg-fuchsia-300">Time</th>
-      <th class="bg-purple-300">Presentation</th>
+      <th class="bg-fuchsia-300 dark:bg-yellow-700">Time</th>
+      <th class="bg-purple-300 dark:bg-orange-900">Presentation</th>
     </tr>
   </thead>
   <tbody>
@@ -29,8 +29,8 @@ date: Last Modified
     {% for time_record in room_track.times -%}
     {% set flip = not flip %}
     {% for item in time_record.subschedule -%}
-    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white odd:print:bg-slate-100">
-      {% if loop.index == 1 %}<td class="px-2 py-1.5 {% if flip %}bg-fuchsia-200 print:bg-slate-200{% else %}bg-fuchsia-100 print:bg-slate-100{% endif %}" rowspan="{{ loop.length }}">{{ item.time_string }}</td>{% endif %}
+    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white dark:odd:bg-orange-950 dark:even:bg-black odd:print:bg-slate-100">
+      {% if loop.index == 1 %}<td class="px-2 py-1.5 {% if flip %}bg-fuchsia-100 dark:bg-yellow-900 print:bg-slate-200{% else %}bg-fuchsia-50 dark:bg-yellow-950 print:bg-slate-100{% endif %}" rowspan="{{ loop.length }}">{{ item.time_string }}</td>{% endif %}
       <td class="px-2 py-1.5">
         <div class="flex flex-col">
           <div class="font-semibold">
@@ -40,7 +40,7 @@ date: Last Modified
             {{ item.title }}
             {% endif %}
           </div>
-          {%- if item.presented_by %}<div class="text-slate-900 text-sm">{{ item.presented_by }}</div>{% endif %}
+          {%- if item.presented_by %}<div class="text-slate-900 dark:text-slate-100 text-sm">{{ item.presented_by }}</div>{% endif %}
         </div>
       </td>
     </tr>
@@ -48,7 +48,7 @@ date: Last Modified
     {%- endfor %}
   </tbody>
 </table>
-
+</div>
 {% endfor %}
 
 
