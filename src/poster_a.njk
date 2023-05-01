@@ -1,0 +1,25 @@
+---
+title: Morning Poster Session
+layout: layouts/base
+date: Last Modified
+---
+<h2>Morning Poster Session</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Event</th>
+      <th>Room</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in schedule_array -%}{% if (item.belongs_to == "main") or (item.belongs_to == "fluff") -%}
+    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}">
+      <td>{{ item.time_start }}&ndash;{{ item.time_end }}</td>
+      <td>{{ item.title }}</td>
+      <td>{{ item.room }}</td>
+    </tr>
+    {%- endif %}{%- endfor %}
+  </tbody>
+</table>

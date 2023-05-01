@@ -16,4 +16,10 @@ module.exports = eleventyConfig => {
       skip_empty_lines: true
     });
   });
+
+  return {
+    dir: {
+      input: "src"
+    }
+  }
 }
