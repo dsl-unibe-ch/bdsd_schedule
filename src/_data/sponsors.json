@@ -1,0 +1,39 @@
+[
+    {
+        "name": "EnhanceR",
+        "short_name": "EnhanceR",
+        "external": true,
+        "url": "https://enhancer.ch"
+    },
+    {
+        "name": "CSL Behring",
+        "short_name": "CSL",
+        "external": true,
+        "url": "https://www.csl.com/research-and-development"
+    },
+    {
+        "name": "Institute of Mathematical Statistics and Actuarial Science",
+        "short_name": "IMSV",
+        "url": "https://www.imsv.unibe.ch/index_eng.html"
+    },
+    {
+        "name": "Intermediate Staff Association",
+        "short_name": "MVUB",
+        "url": "https://www.unibe.ch/university/organization/intermediate_staff_association/about_us/index_eng.html"
+    },
+    {
+        "name": "Data Science Lab",
+        "short_name": "DSL",
+        "url": "https://www.dsl.unibe.ch/"
+    },
+    {
+        "name": "Open Science Team UniBE",
+        "short_name": "Open Science",
+        "url": "https://www.ub.unibe.ch/service/open_science/index_ger.html"
+    },
+    {
+        "name": "Center for Artificial Intelligence in Medicine",
+        "short_name": "CAIM",
+        "url": "https://www.caim.unibe.ch/"
+    }
+]

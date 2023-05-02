@@ -2,7 +2,13 @@
 layout: layouts/base
 ---
 <h1 class="cursor-default text-4xl font-sans font-black py-4 bg-purple-900 print:bg-white text-red-300 print:text-black text-center">Bern Data <span class="text-yellow-200 print:text-black">Science</span> Day 2023</h1>
-<div class="md:container mx-auto text-center">
+<div class="md:container mx-auto text-center md:grid md:grid-cols-4">
   {# {% include 'components/construction.njk' %} #}
-  {{ content | indent(2) | safe }}
+  <div class="md:col-span-3">
+    {{ content | indent(4) | safe }}
+  </div>
+  <div>
+    Sidebar test
+  </div>
 </div>
+{% include 'components/footer.njk' %}

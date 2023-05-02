@@ -1,0 +1,11 @@
+<footer class="my-4 px-4 text-center">
+  <p>Event organized by <a href="https://www.dsl.unibe.ch/" target="_blank">Data Science Lab</a> &mdash; University of Bern</p>
+  <p>Event sponsored by:
+    {% for sponsor in sponsors | selectattr("external") %}
+    <a href="{{ sponsor.url }}" target="_blank" rel="sponsored">{{ sponsor.name }}</a>{{ ", " if not loop.last else "" }}
+    {% endfor %}
+    and UniBE units: {% for sponsor in sponsors | rejectattr("external") %}
+    <a href="{{ sponsor.url }}" target="_blank" rel="sponsored">{{ sponsor.short_name }}</a>{{ ", " if not loop.last else "" }}
+    {% endfor %}
+</p>
+</footer>
