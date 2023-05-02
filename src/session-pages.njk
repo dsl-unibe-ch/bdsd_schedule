@@ -16,13 +16,13 @@ date: Last Modified
 
 {% for room_track in session.room_tracks %}
 <div>
-<h3 class="my-4 font-semibold sticky top-0 bg-gradient-to-b from-orange-200 to-white dark:from-purple-950 dark:to-black bg-fixed print:bg-white z-20">Room {{ room_track.room }}</h3>
+<h3 class="my-4 font-semibold sticky top-0 bg-gradient-to-b from-red-200 to-white dark:from-purple-950 dark:to-black bg-fixed print:bg-white z-20">Room {{ room_track.room }}</h3>
 <table class="mx-auto w-full">
   <thead>
     <tr class="text-lg sticky top-8 z-10">
       <th class="bg-fuchsia-300 dark:bg-yellow-700">Time</th>
-      {% if session.session_type == "poster" %}<th class="bg-purple-300 dark:bg-orange-900">ID</th>{% endif %}
-      <th class="bg-purple-300 dark:bg-orange-900">Presentation</th>
+      {% if session.session_type == "poster" %}<th class="bg-purple-300 dark:bg-red-900">ID</th>{% endif %}
+      <th class="bg-purple-300 dark:bg-red-900">Presentation</th>
     </tr>
   </thead>
   <tbody>
@@ -30,7 +30,7 @@ date: Last Modified
     {% for time_record in room_track.times -%}
     {% set flip = not flip %}
     {% for item in time_record.subschedule -%}
-    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white dark:odd:bg-orange-950 dark:even:bg-black odd:print:bg-slate-100">
+    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white dark:odd:bg-red-950 dark:even:bg-black odd:print:bg-slate-100">
       {% if loop.index == 1 %}<td class="px-2 py-1.5 {% if flip %}bg-fuchsia-100 dark:bg-yellow-900 print:bg-slate-200{% else %}bg-fuchsia-50 dark:bg-yellow-950 print:bg-slate-100{% endif %}" rowspan="{{ loop.length }}">
         <div class="sticky top-16">{{ item.time_string }}</div>
       </td>{% endif %}

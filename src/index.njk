@@ -8,7 +8,7 @@ date: Last Modified
 
 <table class="mx-auto w-full">
   <thead>
-    <tr class="bg-purple-300 dark:bg-orange-900 text-lg sticky top-0 z-10">
+    <tr class="bg-purple-300 dark:bg-red-900 text-lg sticky top-0 z-10">
       <th>Time</th>
       <th>Event</th>
       <th>Room(s)</th>
@@ -16,7 +16,7 @@ date: Last Modified
   </thead>
   <tbody>
     {% for item in schedule -%}{% if (item.belongs_to == "main") or (item.belongs_to == "fluff") -%}
-    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white dark:odd:bg-orange-950 dark:even:bg-black odd:print:bg-slate-100">
+    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white dark:odd:bg-red-950 dark:even:bg-black odd:print:bg-slate-100">
       <td class="px-2 py-1.5">{{ item.time_start }}&ndash;{{ item.time_end }}</td>
       <td class="px-2 py-1.5">
         {% if item.belongs_to == "main" %}
