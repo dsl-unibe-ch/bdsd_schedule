@@ -2,10 +2,12 @@ const { parse } = require('csv-parse/sync');
 const PostCSSPlugin = require("eleventy-plugin-postcss");
 
 module.exports = eleventyConfig => {
-  eleventyConfig.addPassthroughCopy('img');
+  eleventyConfig.addPassthroughCopy('src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('src/manifest.webmanifest');
+  eleventyConfig.addPassthroughCopy('src/img');
   //eleventyConfig.addPassthroughCopy('css');
-  eleventyConfig.addPassthroughCopy('assets');
-  eleventyConfig.addPassthroughCopy('js');
+  eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.addPassthroughCopy('src/js');
   
   eleventyConfig.addFilter("toJson", arr => {
     return JSON.stringify(arr);

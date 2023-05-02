@@ -1,0 +1,10 @@
+{
+    "name": "BDSD 2023 Schedule",
+    "short_name": "BDSD2023",
+    "start_url": ".",
+    "background_color": "#581c87",
+    "icons": [
+        { "src": "/img/icon-192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "/img/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    ]
+}
