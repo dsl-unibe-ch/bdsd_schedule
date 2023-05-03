@@ -8,9 +8,10 @@ pagination:
   alias: sorting
 permalink: "/all_events/{{ sorting.name }}/"
 eleventyComputed:
-  title: "BDSD2023: All events (by {{ sorting.name }})"
+  title: "BDSD2023 | All contributions by {{ sorting.name }}"
+  description: "All contributions by {{ sorting.name }}"
 ---
-<h2 class="my-4 font-semibold">All presentations list</h2>
+<h2 class="my-4 font-semibold">All contributions list</h2>
 <nav class="my-2 print:hidden"><a class="font-semibold" href="/">&lt; Back to Main Schedule</a></nav>
 
 <div class="my-2">

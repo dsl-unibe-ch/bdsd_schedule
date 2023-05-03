@@ -5,7 +5,8 @@ pagination:
   alias: session_name
 permalink: "sessions/{{ session_name}}/"
 eleventyComputed:
-  title: "{{ sessions[session_name].title }}"
+  title: "BDSD 2023 | {{ sessions[session_name].title }}"
+  description: "{{ sessions[session_name].title }}"
 layout: layouts/bdsd
 date: Last Modified
 ---

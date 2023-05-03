@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or (renderData and renderData.title) }}</title>
     <meta name="description" content="{{ description | default("Bern Data Science Day 2023") }}">
+    <meta property="og:title" content="{{ title or (renderData and renderData.title) }}" />
+    <meta property="og:description" content="{{ description | default("Bern Data Science Day 2023") }}">
+    <meta property="og:site_name" content="BDSD 2023" />
+    <meta property="og:url" content="{{ constants.baseURL }}{{ page.url }}" />
+    <meta property="og:image" content="{{ constants.baseURL }}/img/icon-512.png" />
     <meta name="author" content="Data Science Lab">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any">
     <link rel="icon" href="/img/icon.svg" type="image/svg+xml">
