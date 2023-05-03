@@ -1,4 +1,5 @@
-<footer class="my-4 px-4 text-center">
+<footer class="my-4 px-4 text-center lg:container mx-auto">
+  <hr class="dark:border-purple-900 border-orange-800 my-4">
   <p>Event organized by <a href="https://www.bedsi.unibe.ch/" target="_blank">Bern Data Science Initiative</a> &mdash; University of Bern</p>
   <p>Event sponsored by:
     {% for sponsor in sponsors | selectattr("external") %}

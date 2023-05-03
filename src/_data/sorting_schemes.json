@@ -1,0 +1,6 @@
+[
+  { "name": "title", "attr": "title" },
+  { "name": "author", "attr": "author_sort" },
+  { "name": "time", "attr": "time_start_shift" },
+  { "name": "ID", "attr": "id" }
+]

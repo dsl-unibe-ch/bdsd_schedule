@@ -8,6 +8,7 @@ const { DateTime } = require("luxon");
  * @property {string} belongs_to
  * @property {string} title
  * @property {string} presented_by
+ * @property {string} author_sort_override
  * @property {string} room
  * @property {string} time_start
  * @property {string} time_end
@@ -21,6 +22,8 @@ const { DateTime } = require("luxon");
  * @property {string} belongs_to
  * @property {string} title
  * @property {string} presented_by
+ * @property {string} author_sort
+ * @property {string} author_sort_override
  * @property {string[]} rooms
  * @property {string} time_start
  * @property {number} time_start_shift
@@ -38,6 +41,7 @@ function origToNewItem(eventDate) {
     time_string: `${origItem.time_start}–${origItem.time_end}`,
     time_start_shift: DateTime.fromISO(`${eventDate}T${origItem.time_start}`),
     time_end_shift: DateTime.fromISO(`${eventDate}T${origItem.time_end}`),
+    author_sort: origItem.author_sort_override || origItem.presented_by.match(/[\S]*$/)[0],
     children: []
   });
 }

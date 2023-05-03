@@ -1,0 +1,56 @@
+---
+layout: layouts/bdsd
+description: Bern Data Science Day 2023
+date: Last Modified
+pagination:
+  data: sorting_schemes
+  size: 1
+  alias: sorting
+permalink: "/all_events/{{ sorting.name }}/"
+eleventyComputed:
+  title: "BDSD2023: All events (by {{ sorting.name }})"
+---
+<h2 class="my-4 font-semibold">All presentations list</h2>
+
+<div class="my-2">
+  {% for scheme in sorting_schemes %}
+  {% if scheme == sorting %}
+  <span class="font-bold">by {{ scheme.name }}</span>
+  {% else %}
+  <a href="/all_events/{{ scheme.name }}">by {{ scheme.name }}</a>
+  {% endif %}
+  {% if not loop.last %} | {% endif %}
+  {% endfor %}
+</div>
+
+<table class="mx-auto w-full">
+  <thead>
+    <tr class="bg-purple-300 dark:bg-red-900 text-lg sticky top-0 z-10">
+      <th>ID</th>
+      <th>Event</th>
+      <th>Room</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in schedule | sort(false, false, sorting.attr) -%}{% if (item.type == "keynote") or (item.type == "poster") or (item.type == "presentation") -%}
+    <tr data-id="{{ item.id }}" data-belongs-to="{{ item.belongs_to }}" class="odd:bg-purple-100 even:bg-white dark:odd:bg-red-950 dark:even:bg-black odd:print:bg-slate-100">
+      <td class="px-2 py-1.5">{{ item.id }}</td>
+      <td class="px-2 py-1.5">
+        <div class="flex flex-col">
+          <div class="font-semibold">
+            {% if item.children | length %}
+            <a href="/sessions/{{ item.type }}/">{{ item.title }}</a>
+            {% else %}
+            {{ item.title }}
+            {% endif %}
+          </div>
+          {%- if item.presented_by %}<div class="text-slate-900 dark:text-slate-100 text-sm">{{ item.type | capitalize }} by {{ item.presented_by }}</div>{% endif %}
+        </div>
+      </td>
+      <td class="px-2 py-1.5">{{ item.rooms.join(", ") }}</td>
+      <td class="px-2 py-1.5">{{ item.time_start }}&ndash;{{ item.time_end }}</td>
+    </tr>
+    {%- endif %}{%- endfor %}
+  </tbody>
+</table>

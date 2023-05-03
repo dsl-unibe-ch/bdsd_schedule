@@ -1,0 +1,23 @@
+<nav class="flex flex-col items-center">
+  <div class="">
+    <h3 class="my-4 font-semibold text-center">Useful Links</h2>
+    <ul>
+      <li class="mt-2 text-sm">
+        <a class="text-xl" href="{{ constants.votingURL }}">🗳️ Voting Form 🗳️</a><br>
+        Vote for your favorite presentations for the audience award!
+      </li>
+      <li class="mt-2 text-xl"><a href="/all_events/{{ sorting_schemes[0].name }}">All presentations list</a></li>
+      <li class="mt-2 text-xl"><a href="https://www.dsl.unibe.ch/lab/bdsd/">Event page @ DSL</a></li>
+    </ul>
+  </div>
+  <div class="max-lg:w-full flex flex-col items-center">
+    <h3 class="my-4 font-semibold text-center">Room Plan</h2>
+    <div class="max-lg:w-2/3">
+      <p class="mx-4 mb-2 text-left">
+        <span class="font-bold">UniS</span> &ndash; Schanzeneckstrasse 1, 3012 Bern
+      </p>
+      <img class="block dark:hidden" src="/img/floorplan4_light.svg">
+      <img class="hidden dark:block" src="/img/floorplan4_dark.svg">
+    </div>
+  </div>
+</nav>
