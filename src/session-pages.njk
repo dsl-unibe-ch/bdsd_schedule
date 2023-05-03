@@ -6,7 +6,8 @@ pagination:
 permalink: "sessions/{{ session_name}}/"
 eleventyComputed:
   title: "BDSD 2023 | {{ sessions[session_name].title }}"
-  description: "{{ sessions[session_name].title }}"
+  og_title: "{{ sessions[session_name].title }}"
+  description: "Bern Data Science Day 2023 | {{ sessions[session_name].title }}"
 layout: layouts/bdsd
 date: Last Modified
 ---
