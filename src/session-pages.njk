@@ -21,7 +21,7 @@ date: Last Modified
   <thead>
     <tr class="text-lg sticky top-8 z-10">
       <th class="bg-fuchsia-300 dark:bg-yellow-700">Time</th>
-      {% if session.session_type == "poster" %}<th class="bg-purple-300 dark:bg-red-900">ID</th>{% endif %}
+      <th class="bg-purple-300 dark:bg-red-900">ID</th>
       <th class="bg-purple-300 dark:bg-red-900">Presentation</th>
     </tr>
   </thead>
@@ -34,7 +34,7 @@ date: Last Modified
       {% if loop.index == 1 %}<td class="px-2 py-1.5 {% if flip %}bg-fuchsia-100 dark:bg-yellow-900 print:bg-slate-200{% else %}bg-fuchsia-50 dark:bg-yellow-950 print:bg-slate-100{% endif %}" rowspan="{{ loop.length }}">
         <div class="sticky top-16">{{ item.time_string }}</div>
       </td>{% endif %}
-      {% if session.session_type == "poster" %}<td class="px-2 py-1.5">{{ item.id }}</td>{% endif %}
+      <td class="px-2 py-1.5">{{ item.id }}</td>
       <td class="px-2 py-1.5">
         <div class="flex flex-col">
           <div class="font-semibold">
