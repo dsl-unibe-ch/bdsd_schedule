@@ -12,8 +12,8 @@
     "@11ty/eleventy": "^2.0.1",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
-    "eleventy-plugin-postcss": "^1.0.4",
-    "postcss": "^8.4.23",
+    "eleventy-plugin-postcss": "github:whoisvadym/eleventy-plugin-postcss#5fd501fbb5bfb630ad4a4fc99a897eecf52e8205",
+    "postcss": "^8.4.31",
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
